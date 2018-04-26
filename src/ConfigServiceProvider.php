@@ -1,6 +1,6 @@
 <?php
 
-namespace LaPress\Routes;
+namespace LaPress\Config;
 
 use Illuminate\Support\ServiceProvider;
 
