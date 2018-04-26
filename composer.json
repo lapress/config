@@ -1,0 +1,23 @@
+{
+    "name": "lapress/config",
+    "authors": [
+        {
+            "name": "seszcze",
+            "email": "sebastian@ably.pl"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "LaPress\\Config\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaPress\\Config\\ConfigServicePovider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
