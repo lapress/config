@@ -1,11 +1,17 @@
 <?php
 
-namespace LaPress\Routes;
+namespace LaPress\Config;
 
 use Illuminate\Support\ServiceProvider;
-
+/**
+ * @author    Sebastian Szczepański
+ * @copyright ably
+ */
 class ConfigServiceProvider extends ServiceProvider
 {
+    const CONFIGS = [
+        'wordpress',
+    ];
     /**
      * Bootstrap services.
      *
@@ -23,6 +29,8 @@ class ConfigServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        foreach (static::CONFIGS as $config) {
+            $this->mergeConfigFrom(__DIR__.'/config/'.$config.'.php', $config);
+        }
     }
 }
