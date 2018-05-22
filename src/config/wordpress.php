@@ -10,7 +10,7 @@ return [
     'url'   => [
         'backend'        => rtrim(env('APP_BACKEND_URL'), '/'),
         'site'           => rtrim(env('APP_URL'), '/'),
-        'backend_prefix' => trim(parse_url(env('APP_BACKEND_URL'), PHP_URL_PATH), '/').'/',
+        'backend_prefix' => trim(parse_url(env('APP_BACKEND_URL'), PHP_URL_PATH), '/'),
         'site_prefix'    => trim(parse_url(env('APP_URL'), PHP_URL_PATH), '/').'/',
     ],
 
