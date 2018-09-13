@@ -4,7 +4,8 @@ return [
     'core'  => storage_path('/wordpress'),
     'debug' => env('APP_DEBUG'),
     'theme' => [
-        'views' => 'views',
+        'active'     => env('APP_THEME'),
+        'views'      => 'views',
         'option_key' => 'theme_mods_'.env('APP_NAME'),
     ],
     'url'   => [
@@ -52,8 +53,8 @@ return [
         'per_page'    => 10,
         'on_homepage' => 10,
         'map'         => [
-            'page'    => \LaPress\Models\Page::class,
-            'post'    => \LaPress\Models\Post::class,
+            'page' => \LaPress\Models\Page::class,
+            'post' => \LaPress\Models\Post::class,
         ],
         /*
         |--------------------------------------------------------------------------
